@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="InsumosPro - Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço de atacado com entrega rápida.">
-    <title>InsumosPro | Insumos Profissionais para Food Service</title>
+    <meta name="description"
+        content="InsumosPro - Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço de atacado com entrega rápida.">
+    <title>InsumosPro | Insu Profissionais para Food Service</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         /* ===== RESET & BASE ===== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -40,10 +45,10 @@
             --gray-700: #374151;
             --gray-800: #1F2937;
             --gray-900: #111827;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
             --radius: 12px;
             --radius-sm: 8px;
             --radius-full: 9999px;
@@ -86,7 +91,7 @@
         .navbar-logo {
             width: 42px;
             height: 42px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -103,7 +108,7 @@
         }
 
         .navbar-subtitle {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.85);
             font-size: 0.65rem;
             font-weight: 500;
             text-transform: uppercase;
@@ -130,11 +135,11 @@
         }
 
         .navbar-links a:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .navbar-links a.active {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.25);
             font-weight: 600;
         }
 
@@ -165,7 +170,7 @@
             left: -20%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -176,7 +181,7 @@
             right: -10%;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -197,7 +202,7 @@
         }
 
         .hero p {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1.05rem;
             font-weight: 400;
             line-height: 1.7;
@@ -215,11 +220,11 @@
         .search-container input {
             width: 100%;
             padding: 18px 24px 18px 54px;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: var(--radius-full);
             font-size: 1rem;
             font-family: 'Inter', sans-serif;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             color: var(--gray-800);
             outline: none;
             transition: var(--transition);
@@ -417,7 +422,7 @@
             left: 0;
             right: 0;
             height: 40px;
-            background: linear-gradient(to top, rgba(249,250,251,0.8), transparent);
+            background: linear-gradient(to top, rgba(249, 250, 251, 0.8), transparent);
         }
 
         .product-image-wrapper img {
@@ -447,30 +452,37 @@
             background: linear-gradient(135deg, #FEF3C7, #FDE68A);
             color: var(--gold-800);
         }
+
         .tag-molhos {
             background: linear-gradient(135deg, #FEE2E2, #FECACA);
             color: #991B1B;
         }
+
         .tag-queijos {
             background: linear-gradient(135deg, #FEF9C3, #FEF08A);
             color: #854D0E;
         }
+
         .tag-embutidos {
             background: linear-gradient(135deg, #FFE4E6, #FECDD3);
             color: #9F1239;
         }
+
         .tag-embalagens {
             background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
             color: #3730A3;
         }
+
         .tag-oleos {
             background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
             color: #065F46;
         }
+
         .tag-conservas {
             background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
             color: #1E40AF;
         }
+
         .tag-temperos {
             background: linear-gradient(135deg, #FDE68A, #FCD34D);
             color: #92400E;
@@ -545,7 +557,7 @@
         .footer {
             background: var(--gray-900);
             padding: 50px 40px 30px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-content {
@@ -588,7 +600,7 @@
         }
 
         .footer-col ul li a {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             font-size: 0.85rem;
             transition: var(--transition);
@@ -602,7 +614,7 @@
             max-width: 1280px;
             margin: 0 auto;
             padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             font-size: 0.8rem;
         }
@@ -613,6 +625,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -624,14 +637,37 @@
             opacity: 0;
         }
 
-        .product-card:nth-child(1) { animation-delay: 0.05s; }
-        .product-card:nth-child(2) { animation-delay: 0.1s; }
-        .product-card:nth-child(3) { animation-delay: 0.15s; }
-        .product-card:nth-child(4) { animation-delay: 0.2s; }
-        .product-card:nth-child(5) { animation-delay: 0.25s; }
-        .product-card:nth-child(6) { animation-delay: 0.3s; }
-        .product-card:nth-child(7) { animation-delay: 0.35s; }
-        .product-card:nth-child(8) { animation-delay: 0.4s; }
+        .product-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+
+        .product-card:nth-child(6) {
+            animation-delay: 0.3s;
+        }
+
+        .product-card:nth-child(7) {
+            animation-delay: 0.35s;
+        }
+
+        .product-card:nth-child(8) {
+            animation-delay: 0.4s;
+        }
 
         /* ===== NO RESULTS ===== */
         .no-results {
@@ -747,6 +783,7 @@
                 line-height: 1.4;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
+                line-clamp: 2;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
@@ -823,6 +860,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ===== NAVBAR ===== -->
@@ -848,11 +886,13 @@
         <div class="hero-content">
             <h1>Produtos e Insumos</h1>
             <p>
-                Insumos profissionais para pizzarias, lanchonetes, restaurantes e panificadoras. Qualidade premium com preço de atacado e entrega rápida.
+                Insumos profissionais para pizzarias, lanchonetes, restaurantes e panificadoras. Qualidade premium com
+                preço de atacado e entrega rápida.
             </p>
             <div class="search-container">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="Pesquisar insumo, categoria ou marca..." autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Pesquisar insumo, categoria ou marca..."
+                    autocomplete="off">
             </div>
         </div>
     </section>
@@ -860,7 +900,9 @@
     <!-- Wave Divider -->
     <div class="wave-divider">
         <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0 0L60 4.2C120 8.3 240 16.7 360 22.2C480 27.8 600 30.6 720 27.8C840 25 960 16.7 1080 13.9C1200 11.1 1320 13.9 1380 15.3L1440 16.7V50H1380C1320 50 1200 50 1080 50C960 50 840 50 720 50C600 50 480 50 360 50C240 50 120 50 60 50H0V0Z" fill="#F9FAFB"/>
+            <path
+                d="M0 0L60 4.2C120 8.3 240 16.7 360 22.2C480 27.8 600 30.6 720 27.8C840 25 960 16.7 1080 13.9C1200 11.1 1320 13.9 1380 15.3L1440 16.7V50H1380C1320 50 1200 50 1080 50C960 50 840 50 720 50C600 50 480 50 360 50C240 50 120 50 60 50H0V0Z"
+                fill="#F9FAFB" />
         </svg>
     </div>
 
@@ -929,7 +971,8 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">🍕 InsumosPro</div>
-                <p>Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Entrega rápida e preço justo de atacado.</p>
+                <p>Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e
+                    panificadoras. Entrega rápida e preço justo de atacado.</p>
             </div>
             <div class="footer-col">
                 <h4>Categorias</h4>
@@ -1162,13 +1205,13 @@
         }
 
         // ===== SEARCH =====
-        document.getElementById('searchInput').addEventListener('input', function(e) {
+        document.getElementById('searchInput').addEventListener('input', function (e) {
             searchQuery = e.target.value.toLowerCase().trim();
             renderProducts();
         });
 
         // ===== MOBILE MENU =====
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
             document.getElementById('navLinks').classList.toggle('open');
         });
 
@@ -1177,4 +1220,5 @@
     </script>
 
 </body>
+
 </html>
