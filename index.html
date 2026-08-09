@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="InsumosPro - Fornecimento insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço de atacado com entrega rápida.">
-    <title>InsumosP | Insu Profissionais para Food Service</title>
+    <title>InsumosPro | Insumos Profissionais para Food Service</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -22,19 +22,19 @@
         }
 
         :root {
-            --green-50: #ECFDF5;
-            --green-100: #D1FAE5;
-            --green-200: #A7F3D0;
-            --green-300: #6EE7B7;
-            --green-400: #34D399;
-            --green-500: #10B981;
-            --green-600: #059669;
-            --green-700: #047857;
-            --green-800: #065F46;
-            --green-900: #064E3B;
-            --green-gradient: linear-gradient(135deg, #10B981 0%, #059669 40%, #047857 100%);
-            --green-gradient-light: linear-gradient(135deg, #6EE7B7 0%, #34D399 50%, #10B981 100%);
-            --green-gradient-hero: linear-gradient(160deg, #059669 0%, #047857 35%, #065F46 70%, #064E3B 100%);
+            --gold-50: #FFFBEB;
+            --gold-100: #FEF3C7;
+            --gold-200: #FDE68A;
+            --gold-300: #FCD34D;
+            --gold-400: #FBBF24;
+            --gold-500: #F59E0B;
+            --gold-600: #D97706;
+            --gold-700: #B45309;
+            --gold-800: #92400E;
+            --gold-900: #78350F;
+            --amber-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 40%, #B45309 100%);
+            --amber-gradient-light: linear-gradient(135deg, #FCD34D 0%, #FBBF24 50%, #F59E0B 100%);
+            --amber-gradient-hero: linear-gradient(160deg, #FBBF24 0%, #F59E0B 30%, #D97706 60%, #B45309 100%);
             --white: #FFFFFF;
             --gray-50: #F9FAFB;
             --gray-100: #F3F4F6;
@@ -69,7 +69,7 @@
 
         /* ===== HEADER / NAVBAR ===== */
         .navbar {
-            background: var(--green-gradient-hero);
+            background: var(--amber-gradient-hero);
             padding: 0 40px;
             height: 72px;
             display: flex;
@@ -78,7 +78,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(4, 120, 87, 0.35);
+            box-shadow: 0 4px 20px rgba(180, 83, 9, 0.3);
         }
 
         .navbar-brand {
@@ -156,7 +156,7 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            background: var(--green-gradient-hero);
+            background: var(--amber-gradient-hero);
             padding: 60px 40px 80px;
             text-align: center;
             position: relative;
@@ -198,7 +198,7 @@
             font-weight: 800;
             letter-spacing: -1px;
             margin-bottom: 16px;
-            text-shadow: 0 2px 10px rgba(6, 78, 59, 0.3);
+            text-shadow: 0 2px 10px rgba(120, 53, 15, 0.2);
         }
 
         .hero p {
@@ -228,7 +228,7 @@
             color: var(--gray-800);
             outline: none;
             transition: var(--transition);
-            box-shadow: 0 8px 30px rgba(6, 78, 59, 0.15);
+            box-shadow: 0 8px 30px rgba(120, 53, 15, 0.15);
         }
 
         .search-container input::placeholder {
@@ -236,9 +236,9 @@
         }
 
         .search-container input:focus {
-            border-color: var(--green-300);
+            border-color: var(--gold-300);
             background: var(--white);
-            box-shadow: 0 8px 30px rgba(6, 78, 59, 0.25), 0 0 0 4px rgba(52, 211, 153, 0.25);
+            box-shadow: 0 8px 30px rgba(120, 53, 15, 0.25), 0 0 0 4px rgba(251, 191, 36, 0.2);
         }
 
         .search-icon {
@@ -290,30 +290,30 @@
             align-items: center;
             gap: 8px;
             padding: 12px 24px;
-            border: 2px solid var(--green-200);
+            border: 2px solid var(--gold-200);
             background: var(--white);
             border-radius: var(--radius-full);
             font-family: 'Inter', sans-serif;
             font-size: 0.875rem;
             font-weight: 600;
-            color: var(--green-700);
+            color: var(--gold-700);
             cursor: pointer;
             transition: var(--transition);
             box-shadow: var(--shadow-sm);
         }
 
         .category-btn:hover {
-            background: var(--green-50);
-            border-color: var(--green-400);
+            background: var(--gold-50);
+            border-color: var(--gold-400);
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
 
         .category-btn.active {
-            background: var(--green-gradient);
+            background: var(--amber-gradient);
             color: var(--white);
             border-color: transparent;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
         }
 
         .category-btn .cat-icon {
@@ -346,12 +346,12 @@
         }
 
         .segment-btn:hover {
-            background: var(--green-100);
-            color: var(--green-800);
+            background: var(--gold-100);
+            color: var(--gold-800);
         }
 
         .segment-btn.active {
-            background: var(--green-700);
+            background: var(--gold-700);
             color: var(--white);
         }
 
@@ -376,7 +376,7 @@
 
         .products-count span {
             font-weight: 700;
-            color: var(--green-700);
+            color: var(--gold-700);
         }
 
         .products-grid {
@@ -400,7 +400,7 @@
         .product-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-xl);
-            border-color: var(--green-300);
+            border-color: var(--gold-200);
         }
 
         .product-image-wrapper {
@@ -449,8 +449,8 @@
         }
 
         .tag-farinhas {
-            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
-            color: var(--green-800);
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: var(--gold-800);
         }
 
         .tag-molhos {
@@ -484,8 +484,8 @@
         }
 
         .tag-temperos {
-            background: linear-gradient(135deg, #A7F3D0, #6EE7B7);
-            color: #064E3B;
+            background: linear-gradient(135deg, #FDE68A, #FCD34D);
+            color: #92400E;
         }
 
         .product-info {
@@ -514,7 +514,7 @@
         .product-price {
             font-size: 1.4rem;
             font-weight: 800;
-            color: var(--green-700);
+            color: var(--gold-700);
             margin-bottom: 16px;
             display: flex;
             align-items: baseline;
@@ -532,7 +532,7 @@
             justify-content: center;
             gap: 8px;
             padding: 12px 24px;
-            background: var(--green-gradient);
+            background: var(--amber-gradient);
             color: var(--white);
             border: none;
             border-radius: var(--radius-sm);
@@ -541,11 +541,11 @@
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
         }
 
         .product-btn:hover {
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
             transform: translateY(-1px);
         }
 
@@ -572,7 +572,7 @@
         .footer-brand .footer-logo {
             font-size: 1.4rem;
             font-weight: 800;
-            color: var(--green-400);
+            color: var(--gold-400);
             margin-bottom: 12px;
         }
 
@@ -607,7 +607,7 @@
         }
 
         .footer-col ul li a:hover {
-            color: var(--green-400);
+            color: var(--gold-400);
         }
 
         .footer-bottom {
@@ -710,7 +710,7 @@
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: var(--green-800);
+                background: var(--gold-700);
                 flex-direction: column;
                 padding: 16px;
                 box-shadow: var(--shadow-lg);
