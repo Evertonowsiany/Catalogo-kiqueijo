@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="InsumosPro - Fornecimento insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço de atacado com entrega rápida.">
-    <title>InsumosPro | Insumos Profissionais para Food Service</title>
+        content="Kiqueijo - Fornecimento de requeijões e insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço de atacado com entrega rápida.">
+    <title>Kiqueijo | Requeijões e Insumos Profissionais</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -320,44 +320,7 @@
             font-size: 1.15rem;
         }
 
-        /* Segment Buttons (Pizzaria, Lanchonete, etc.) */
-        .segments-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
 
-        .segment-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border: none;
-            background: var(--gray-100);
-            border-radius: var(--radius-full);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--gray-600);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .segment-btn:hover {
-            background: var(--gold-100);
-            color: var(--gold-800);
-        }
-
-        .segment-btn.active {
-            background: var(--gold-700);
-            color: var(--white);
-        }
-
-        .segment-btn .seg-icon {
-            font-size: 1.05rem;
-        }
 
         /* ===== PRODUCTS SECTION ===== */
         .products-section {
@@ -824,10 +787,7 @@
                 font-size: 1rem;
             }
 
-            .segment-btn {
-                padding: 8px 14px;
-                font-size: 0.72rem;
-            }
+
 
             .hero h1 {
                 font-size: 1.5rem;
@@ -866,9 +826,9 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
         <a href="#" class="navbar-brand">
-            <div class="navbar-logo">🍕</div>
+            <div class="navbar-logo">🧀</div>
             <div>
-                <div class="navbar-title">InsumosPro</div>
+                <div class="navbar-title">Kiqueijo</div>
                 <div class="navbar-subtitle">Insumos para Food Service</div>
             </div>
         </a>
@@ -908,50 +868,19 @@
 
     <!-- ===== CATEGORIES ===== -->
     <section class="categories-section" id="categorias">
-        <div class="categories-title">Navegue por Segmento</div>
-        <div class="segments-row">
-            <button class="segment-btn active" data-segment="todos" onclick="filterSegment(this)">
-                <span class="seg-icon">📋</span> Todos
-            </button>
-            <button class="segment-btn" data-segment="pizzaria" onclick="filterSegment(this)">
-                <span class="seg-icon">🍕</span> Pizzarias
-            </button>
-            <button class="segment-btn" data-segment="lanchonete" onclick="filterSegment(this)">
-                <span class="seg-icon">🍔</span> Lanchonetes
-            </button>
-            <button class="segment-btn" data-segment="restaurante" onclick="filterSegment(this)">
-                <span class="seg-icon">🍽️</span> Restaurantes
-            </button>
-            <button class="segment-btn" data-segment="panificadora" onclick="filterSegment(this)">
-                <span class="seg-icon">🥖</span> Panificadoras
-            </button>
-        </div>
-
-        <div class="categories-title" style="margin-top: 28px;">Filtrar por Categoria</div>
+        <div class="categories-title">Filtrar por Categoria</div>
         <div class="categories-grid">
             <button class="category-btn active" data-category="todos" onclick="filterCategory(this)">
                 <span class="cat-icon">📦</span> Todos
             </button>
-            <button class="category-btn" data-category="farinhas" onclick="filterCategory(this)">
-                <span class="cat-icon">🌾</span> Farinhas e Fermentos
+            <button class="category-btn" data-category="requeijao" onclick="filterCategory(this)">
+                <span class="cat-icon">🧀</span> Requeijão Cremoso
             </button>
-            <button class="category-btn" data-category="molhos" onclick="filterCategory(this)">
-                <span class="cat-icon">🍅</span> Molhos e Conservas
+            <button class="category-btn" data-category="mistura" onclick="filterCategory(this)">
+                <span class="cat-icon">🥣</span> Mistura Culinária
             </button>
-            <button class="category-btn" data-category="queijos" onclick="filterCategory(this)">
-                <span class="cat-icon">🧀</span> Queijos e Laticínios
-            </button>
-            <button class="category-btn" data-category="embutidos" onclick="filterCategory(this)">
-                <span class="cat-icon">🥩</span> Embutidos e Carnes
-            </button>
-            <button class="category-btn" data-category="embalagens" onclick="filterCategory(this)">
-                <span class="cat-icon">📦</span> Embalagens
-            </button>
-            <button class="category-btn" data-category="oleos" onclick="filterCategory(this)">
-                <span class="cat-icon">🫒</span> Óleos e Azeites
-            </button>
-            <button class="category-btn" data-category="temperos" onclick="filterCategory(this)">
-                <span class="cat-icon">🧂</span> Temperos e Condimentos
+            <button class="category-btn" data-category="cheddar" onclick="filterCategory(this)">
+                <span class="cat-icon">🧀</span> Sabor Cheddar
             </button>
         </div>
     </section>
@@ -959,7 +888,7 @@
     <!-- ===== PRODUCTS ===== -->
     <section class="products-section" id="produtos">
         <div class="products-count" id="productsCount">
-            <span>12</span> produtos encontrados
+            <span>5</span> produtos encontrados
         </div>
         <div class="products-grid" id="productsGrid">
             <!-- Products will be injected by JS -->
@@ -970,18 +899,17 @@
     <footer class="footer" id="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="footer-logo">🍕 InsumosPro</div>
-                <p>Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e
+                <div class="footer-logo">🧀 Kiqueijo</div>
+                <p>Fornecimento de requeijões e insumos de qualidade profissional para pizzarias, lanchonetes,
+                    restaurantes e
                     panificadoras. Entrega rápida e preço justo de atacado.</p>
             </div>
             <div class="footer-col">
                 <h4>Categorias</h4>
                 <ul>
-                    <li><a href="#categorias">Farinhas e Fermentos</a></li>
-                    <li><a href="#categorias">Molhos e Conservas</a></li>
-                    <li><a href="#categorias">Queijos e Laticínios</a></li>
-                    <li><a href="#categorias">Embutidos e Carnes</a></li>
-                    <li><a href="#categorias">Embalagens</a></li>
+                    <li><a href="#categorias">Requeijão Cremoso</a></li>
+                    <li><a href="#categorias">Mistura Culinária</a></li>
+                    <li><a href="#categorias">Sabor Cheddar</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -995,7 +923,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 InsumosPro. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Kiqueijo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -1004,141 +932,58 @@
         const products = [
             {
                 id: 1,
-                name: "Farinha Tipo 00 Italiana",
-                desc: "Saca de 25kg ideal para massas de pizza com longa fermentação natural.",
-                price: 189.00,
-                image: "images/farinha_tipo00.png",
-                category: "farinhas",
-                tag: "Farinhas e Fermentos",
-                tagClass: "tag-farinhas",
-                segments: ["pizzaria", "panificadora", "restaurante"]
+                name: "Requeijão Cremoso Coronata 1,5kg",
+                desc: "Requeijão cremoso de altíssima qualidade em bisnaga de 1,5kg, ideal para bordas de pizza, esfihas e recheios.",
+                price: 36.90,
+                image: "images/requeijao_coronata_1_5kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-queijos"
             },
             {
                 id: 2,
-                name: "Mussarela Fatiada Premium",
-                desc: "Bloco de 4kg de mussarela fatiada com derretimento perfeito para pizzas.",
-                price: 134.00,
-                image: "images/mussarela.png",
-                category: "queijos",
-                tag: "Queijos e Laticínios",
-                tagClass: "tag-queijos",
-                segments: ["pizzaria", "lanchonete", "restaurante"]
+                name: "Milk Top Sabor Requeijão cremosãoo 1,8kg",
+                desc: "Mistura especial sabor requeijão em bisnaga de 1,8kg com excelente rendimento e ótimo derretimento.",
+                price: 34.50,
+                image: "images/milk_top_1_8kg.jpg",
+                category: "mistura",
+                tag: "mistura",
+                tagClass: "tag-queijos"
             },
             {
                 id: 3,
-                name: "Tomate Pelado Italiano",
-                desc: "Lata de 2,9kg para molho de pizza encorpado. Importado da Itália.",
-                price: 68.00,
-                image: "images/tomate_pelado.png",
-                category: "molhos",
-                tag: "Molhos e Conservas",
-                tagClass: "tag-molhos",
-                segments: ["pizzaria", "restaurante", "lanchonete"]
+                name: "Affamato Sabor Cheddar 1,2kg",
+                desc: "Mistura de requeijão e gordura vegetal sabor Cheddar em bisnaga de 1,2kg. Sabor intenso e cremosidade.",
+                price: 29.90,
+                image: "images/affamato_cheddar_1_2kg.jpg",
+                category: "cheddar",
+                tag: "Sabor Cheddar",
+                tagClass: "tag-temperos"
             },
             {
                 id: 4,
-                name: "Azeite Extra Virgem 5L",
-                desc: "Galão de 5 litros de azeite extra virgem com acidez inferior a 0,5%.",
-                price: 142.00,
-                image: "images/azeite_oliva.png",
-                category: "oleos",
-                tag: "Óleos e Azeites",
-                tagClass: "tag-oleos",
-                segments: ["pizzaria", "restaurante", "lanchonete", "panificadora"]
+                name: "Affamato Coronata Mistura de Requeijão 1,5kg",
+                desc: "Mistura culinária de requeijão, gordura vegetal e amido 1,5kg. Perfeita para uso profissional.",
+                price: 31.90,
+                image: "images/affamato_coronata_1_5kg.jpg",
+                category: "mistura",
+                tag: "Mistura Culinária",
+                tagClass: "tag-farinhas"
             },
             {
                 id: 5,
-                name: "Pepperoni Fatiado 1kg",
-                desc: "Pepperoni premium fatiado, pronto para uso em pizzas e sanduíches.",
-                price: 58.00,
-                image: "images/pepperoni.png",
-                category: "embutidos",
-                tag: "Embutidos e Carnes",
-                tagClass: "tag-embutidos",
-                segments: ["pizzaria", "lanchonete"]
-            },
-            {
-                id: 6,
-                name: "Caixa p/ Pizza 35cm (50un)",
-                desc: "Pacote com 50 caixas de pizza em papelão kraft resistente.",
-                price: 96.00,
-                image: "images/caixa_pizza.png",
-                category: "embalagens",
-                tag: "Embalagens",
-                tagClass: "tag-embalagens",
-                segments: ["pizzaria"]
-            },
-            {
-                id: 7,
-                name: "Farinha de Trigo Especial 25kg",
-                desc: "Farinha profissional para pães, bolos e salgados. Alta absorção de água.",
-                price: 119.00,
-                image: "images/farinha_tipo00.png",
-                category: "farinhas",
-                tag: "Farinhas e Fermentos",
-                tagClass: "tag-farinhas",
-                segments: ["panificadora", "lanchonete", "restaurante"]
-            },
-            {
-                id: 8,
-                name: "Molho de Tomate Refogado 3,1kg",
-                desc: "Molho de tomate pronto refogado com temperos naturais. Prático e saboroso.",
-                price: 32.00,
-                image: "images/tomate_pelado.png",
-                category: "molhos",
-                tag: "Molhos e Conservas",
-                tagClass: "tag-molhos",
-                segments: ["lanchonete", "restaurante", "pizzaria"]
-            },
-            {
-                id: 9,
-                name: "Provolone Defumado 500g",
-                desc: "Queijo provolone defumado artesanal para pizzas e tábuas de frios.",
-                price: 46.00,
-                image: "images/mussarela.png",
-                category: "queijos",
-                tag: "Queijos e Laticínios",
-                tagClass: "tag-queijos",
-                segments: ["pizzaria", "restaurante", "lanchonete"]
-            },
-            {
-                id: 10,
-                name: "Orégano Desidratado 500g",
-                desc: "Orégano selecionado de alta qualidade. Aroma intenso e sabor marcante.",
-                price: 28.00,
-                image: "images/azeite_oliva.png",
-                category: "temperos",
-                tag: "Temperos e Condimentos",
-                tagClass: "tag-temperos",
-                segments: ["pizzaria", "restaurante", "lanchonete", "panificadora"]
-            },
-            {
-                id: 11,
-                name: "Hambúrguer Artesanal 180g (12un)",
-                desc: "Caixa com 12 hambúrgueres artesanais de 180g. Blend bovino premium.",
-                price: 89.00,
-                image: "images/pepperoni.png",
-                category: "embutidos",
-                tag: "Embutidos e Carnes",
-                tagClass: "tag-embutidos",
-                segments: ["lanchonete", "restaurante"]
-            },
-            {
-                id: 12,
-                name: "Embalagem Delivery Kraft (100un)",
-                desc: "Caixas kraft para delivery de lanches e porções. Resistentes e sustentáveis.",
-                price: 78.00,
-                image: "images/caixa_pizza.png",
-                category: "embalagens",
-                tag: "Embalagens",
-                tagClass: "tag-embalagens",
-                segments: ["lanchonete", "restaurante"]
+                name: "Lacto Alegre Requeijão 1,8kg",
+                desc: "Requeijão cremoso tradicional Lacto Alegre em bisnaga de 1,8kg. Textura consistente e sabor inconfundível.",
+                price: 39.90,
+                image: "images/lacto_alegre_1_8kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-queijos"
             }
         ];
 
         // ===== STATE =====
         let activeCategory = 'todos';
-        let activeSegment = 'todos';
         let searchQuery = '';
 
         // ===== RENDER PRODUCTS =====
@@ -1148,12 +993,11 @@
 
             const filtered = products.filter(p => {
                 const matchCategory = activeCategory === 'todos' || p.category === activeCategory;
-                const matchSegment = activeSegment === 'todos' || p.segments.includes(activeSegment);
                 const matchSearch = searchQuery === '' ||
                     p.name.toLowerCase().includes(searchQuery) ||
                     p.desc.toLowerCase().includes(searchQuery) ||
                     p.tag.toLowerCase().includes(searchQuery);
-                return matchCategory && matchSegment && matchSearch;
+                return matchCategory && matchSearch;
             });
 
             countEl.innerHTML = `<span>${filtered.length}</span> produto${filtered.length !== 1 ? 's' : ''} encontrado${filtered.length !== 1 ? 's' : ''}`;
@@ -1194,13 +1038,6 @@
             document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             activeCategory = btn.dataset.category;
-            renderProducts();
-        }
-
-        function filterSegment(btn) {
-            document.querySelectorAll('.segment-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            activeSegment = btn.dataset.segment;
             renderProducts();
         }
 
