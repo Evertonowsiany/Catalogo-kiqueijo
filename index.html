@@ -888,6 +888,12 @@
             <button class="category-btn" data-category="queijos" onclick="filterCategory(this)">
                 <span class="cat-icon">🧀</span> Queijos
             </button>
+            <button class="category-btn" data-category="temperos" onclick="filterCategory(this)">
+                <span class="cat-icon">🌿</span> Temperos
+            </button>
+            <button class="category-btn" data-category="embutidos" onclick="filterCategory(this)">
+                <span class="cat-icon">🥓</span> Embutidos
+            </button>
         </div>
     </section>
 
@@ -918,6 +924,8 @@
                     <li><a href="#categorias">Sabor Cheddar</a></li>
                     <li><a href="#categorias">Conservas</a></li>
                     <li><a href="#categorias">Queijos</a></li>
+                    <li><a href="#categorias">Temperos</a></li>
+                    <li><a href="#categorias">Embutidos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -942,7 +950,8 @@
                 id: 1,
                 name: "Requeijão Cremoso Coronata 1,5kg",
                 desc: "Requeijão cremoso de altíssima qualidade em bisnaga de 1,5kg, ideal para bordas de pizza, esfihas e recheios.",
-                price: 36.90,
+                price: 45.69,
+                unit: "un",
                 image: "images/requeijao_coronata_1_5kg.jpg",
                 category: "requeijao",
                 tag: "Requeijão Cremoso",
@@ -953,6 +962,7 @@
                 name: "Milk Top Sabor Requeijão 1,8kg",
                 desc: "Mistura especial sabor requeijão em bisnaga de 1,8kg com excelente rendimento e ótimo derretimento.",
                 price: 10.50,
+                unit: "un",
                 image: "images/milk_top_1_8kg.jpg",
                 category: "mistura",
                 tag: "mistura culinaria",
@@ -963,6 +973,7 @@
                 name: "Affamato Sabor Cheddar 1,2kg",
                 desc: "Mistura de requeijão e gordura vegetal sabor Cheddar em bisnaga de 1,2kg. Sabor intenso e cremosidade.",
                 price: 29.90,
+                unit: "un",
                 image: "images/affamato_cheddar_1_2kg.jpg",
                 category: "cheddar",
                 tag: "Mistura culinaria",
@@ -973,6 +984,7 @@
                 name: "Affamato Coronata Mistura de Requeijão 1,5kg",
                 desc: "Mistura culinária de requeijão, gordura vegetal e amido 1,5kg. Perfeita para uso profissional.",
                 price: 31.90,
+                unit: "un",
                 image: "images/affamato_coronata_1_5kg.jpg",
                 category: "mistura",
                 tag: "Mistura Culinária",
@@ -983,6 +995,7 @@
                 name: "Lacto Alegre Requeijão 1,8kg",
                 desc: "Requeijão cremoso tradicional Lacto Alegre em bisnaga de 1,8kg. Textura consistente e sabor inconfundível.",
                 price: 39.90,
+                unit: "un",
                 image: "images/lacto_alegre_1_8kg.jpg",
                 category: "requeijao",
                 tag: "Requeijão Cremoso",
@@ -993,6 +1006,7 @@
                 name: "Queijo Cremoso Philadelphia 1,5kg",
                 desc: "Cream Cheese Original Philadelphia em formato de bisnaga de 1,5kg, ideal para toques de leveza.",
                 price: 54.90,
+                unit: "un",
                 image: "images/philadelphia_1_5kg.jpg",
                 category: "requeijao",
                 tag: "Cream Cheese",
@@ -1003,6 +1017,7 @@
                 name: "CoroCheese Cream Cheese 1,2kg",
                 desc: "Cream Cheese CoroCheese em bisnaga de 1,2kg. Qualidade e cremosidade da indústria brasileira.",
                 price: 32.90,
+                unit: "un",
                 image: "images/corocheese_1_2kg.jpg",
                 category: "requeijao",
                 tag: "Cream Cheese",
@@ -1013,6 +1028,7 @@
                 name: "CoroCheddar Mistura 1,8kg",
                 desc: "Mistura de requeijão com queijo tipo cheddar e gordura vegetal em bisnaga de 1,8kg.",
                 price: 35.90,
+                unit: "un",
                 image: "images/corocheddar_mistura_1_8kg.jpg",
                 category: "cheddar",
                 tag: "Mistura culinaria",
@@ -1023,6 +1039,7 @@
                 name: "CoroCheddar Requeijão Cremoso 1,5kg",
                 desc: "Requeijão cremoso com queijo tipo cheddar em bisnaga de 1,5kg, perfeito para hambúrgueres.",
                 price: 38.90,
+                unit: "un",
                 image: "images/corocheddar_cremoso_1_5kg.jpg",
                 category: "cheddar",
                 tag: "Sabor Cheddar",
@@ -1033,6 +1050,7 @@
                 name: "Vale do Pardo Mistura Culinária 1,8kg",
                 desc: "Pasta à base de requeijão e gordura vegetal em bisnaga de 1,8kg. Especial para pizzas, esfihas e recheios com excelente cremosidade.",
                 price: 34.90,
+                unit: "un",
                 image: "images/vale_do_pardo_1_8kg.jpg",
                 category: "mistura",
                 tag: "Mistura Culinária",
@@ -1043,6 +1061,7 @@
                 name: "Requeijão Cremoso com Queijo Della Vita 1,5kg",
                 desc: "Requeijão cremoso com queijo Della Vita em bisnaga de 1,5kg. Sabor autêntico e consistência ideal para pizzas, recheios e culinária profissional.",
                 price: 36.90,
+                unit: "un",
                 image: "images/della_vita_1_5kg.jpg",
                 category: "requeijao",
                 tag: "Requeijão Cremoso",
@@ -1053,6 +1072,7 @@
                 name: "Milho Verde Quero Lata 3,1kg",
                 desc: "Milho verde em conserva Quero em lata de 3,1kg (peso drenado 1,7kg). Pronto para servir e ideal para pizzas, lanches e saladas.",
                 price: 24.90,
+                unit: "un",
                 image: "images/quero_milho_verde.jpeg",
                 category: "conservas",
                 tag: "Conservas",
@@ -1063,6 +1083,7 @@
                 name: "Queijo Mussarela Queijos da Lelê Peça",
                 desc: "Queijo mussarela tradicional Queijos da Lelê. Excelente derretimento e sabor suave, ideal para pizzas, sanduíches e salgados.",
                 price: 32.90,
+                unit: "kg",
                 image: "images/queijos_da_lele_mussarela.jpeg",
                 category: "queijos",
                 tag: "Mussarela",
@@ -1073,6 +1094,7 @@
                 name: "Queijo Mussarela Latelli Peça",
                 desc: "Queijo mussarela Latelli em peça. Sabor pronunciado e derretimento perfeito para pizzas de alto padrão e receitas culinárias.",
                 price: 34.90,
+                unit: "kg",
                 image: "images/latelli_mussarela.jpeg",
                 category: "queijos",
                 tag: "Mussarela",
@@ -1083,10 +1105,55 @@
                 name: "Queijo Mussarela Laticínios Mangoni Peça",
                 desc: "Queijo mussarela Mangoni em peça. Altíssimo padrão de qualidade, ideal para fatiar, ralar e derreter em pizzas e receitas especiais.",
                 price: 33.90,
+                unit: "kg",
                 image: "images/mangoni_mussarela.jpeg",
                 category: "queijos",
                 tag: "Mussarela",
                 tagClass: "tag-queijos"
+            },
+            {
+                id: 16,
+                name: "Oregano Luzago 1kg",
+                desc: "Orégano seco em flocos Luzago Alimentos. Aroma intenso e qualidade garantida, essencial para pizzas, molhos e temperos profissionais.",
+                price: 27.99,
+                unit: "kg",
+                image: "images/oregano_luzago_1kg.jpg",
+                category: "temperos",
+                tag: "Orégano",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 17,
+                name: "Alho Triturado ArcoBello 1kg",
+                desc: "Alho triturado ArcoBello em pote de 1kg. Praticidade e sabor intenso para temperar e dar um toque especial nas suas receitas.",
+                price: 14.99,
+                unit: "un",
+                image: "images/alho_triturado_1kg.png",
+                category: "temperos",
+                tag: "Alho",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 18,
+                name: "Linguiça Calabresa Frimesa 3kg",
+                desc: "Linguiça tipo calabresa cozida e defumada Frimesa. Especial para fatiar, perfeita para pizzas e lanches. Pacote de 3kg.",
+                price: 22.49,
+                unit: "kg",
+                image: "images/calabresa_frimesa_3kg.png",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 19,
+                name: "Linguiça Calabresa Friella Inteira",
+                desc: "Linguiça tipo calabresa cozida e defumada Friella. Excelente qualidade e sabor, ideal para pizzas, porções e lanches.",
+                price: 18.50,
+                unit: "kg",
+                image: "images/calabresa_friella.png",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
             }
         ];
 
@@ -1131,7 +1198,7 @@
                         <h3 class="product-name">${p.name}</h3>
                         <p class="product-desc">${p.desc}</p>
                         <div class="product-price">
-                            <span class="currency">R$</span> ${p.price.toFixed(2).replace('.', ',')}
+                            <span class="currency">R$</span> ${p.price.toFixed(2).replace('.', ',')}${p.unit ? ` <span class="product-unit" style="font-size: 0.6em; font-weight: 500; color: #666; vertical-align: middle;">${p.unit}</span>` : ''}
                         </div>
                         <button class="product-btn" id="btn-product-${p.id}">
                             Mais informações

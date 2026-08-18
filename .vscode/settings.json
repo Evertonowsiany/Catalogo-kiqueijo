@@ -1,0 +1,8 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": true,
+    "editor.inlineSuggest.edits.showCollapsed": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggest.localityBonus": false,
+    "editor.suggest.preview": true
+}
