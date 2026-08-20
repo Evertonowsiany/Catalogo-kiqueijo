@@ -818,6 +818,195 @@
                 padding-bottom: 50px;
             }
         }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: var(--white);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 520px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            transform: translateY(40px) scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-img-area {
+            background: linear-gradient(160deg, #FEF3C7 0%, #FDE68A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 220px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .modal-img-area img {
+            max-height: 180px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(120,53,15,0.18));
+        }
+
+        .modal-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 16px;
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: rgba(255,255,255,0.8);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--gray-700);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-close:hover {
+            background: var(--white);
+            transform: scale(1.1);
+            color: var(--gray-900);
+        }
+
+        .modal-body {
+            padding: 28px 28px 32px;
+        }
+
+        .modal-body h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .modal-body p {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+
+        .modal-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+
+        .modal-price-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-price-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold-700);
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .modal-price-value .currency {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .modal-price-value .unit {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gray-500);
+        }
+
+        .modal-whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+        }
+
+        .modal-whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+        }
+
+        @media (max-width: 480px) {
+            .modal-box {
+                border-radius: 16px;
+            }
+            .modal-img-area {
+                height: 180px;
+            }
+            .modal-body {
+                padding: 20px 20px 24px;
+            }
+            .modal-body h2 {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
@@ -906,6 +1095,33 @@
             <!-- Products will be injected by JS -->
         </div>
     </section>
+
+    <!-- ===== MODAL PRODUTO 1 ===== -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box" id="modalBox">
+            <div class="modal-img-area">
+                <img id="modalImg" src="" alt="" />
+                <span class="modal-tag tag-queijos" id="modalTag"></span>
+                <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-price-row">
+                    <span class="modal-price-label">Preço</span>
+                    <div class="modal-price-value">
+                        <span class="currency">R$</span>
+                        <span id="modalPrice"></span>
+                        <span class="unit" id="modalUnit"></span>
+                    </div>
+                </div>
+                <a class="modal-whatsapp-btn" id="modalWhatsapp" href="#" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Pedir pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer" id="footer">
@@ -1080,6 +1296,17 @@
             },
             {
                 id: 13,
+                name: "Molho de Tomate Pizza Predilecta Bag 3,1kg",
+                desc: "Molho de tomate especial para pizza Predilecta em embalagem bag de 3,1kg. Pronto para uso, com excelente rendimento e sabor marcante.",
+                price: 26.90,
+                unit: "un",
+                image: "images/predilecta_molho_tomate_3_1kg.png",
+                category: "conservas",
+                tag: "Molho de Tomate",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 14,
                 name: "Queijo Mussarela Queijos da Lelê Peça",
                 desc: "Queijo mussarela tradicional Queijos da Lelê. Excelente derretimento e sabor suave, ideal para pizzas, sanduíches e salgados.",
                 price: 32.90,
@@ -1090,7 +1317,7 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 14,
+                id: 15,
                 name: "Queijo Mussarela Latelli Peça",
                 desc: "Queijo mussarela Latelli em peça. Sabor pronunciado e derretimento perfeito para pizzas de alto padrão e receitas culinárias.",
                 price: 34.90,
@@ -1101,7 +1328,7 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 15,
+                id: 16,
                 name: "Queijo Mussarela Laticínios Mangoni Peça",
                 desc: "Queijo mussarela Mangoni em peça. Altíssimo padrão de qualidade, ideal para fatiar, ralar e derreter em pizzas e receitas especiais.",
                 price: 33.90,
@@ -1112,7 +1339,18 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 16,
+                id: 17,
+                name: "Queijo Mussarela Friopac Peça",
+                desc: "Queijo mussarela Friopac em peça. Excelente textura, sabor marcante e ótimo derretimento para pizzas, lanches e culinária em geral.",
+                price: 30.00,
+                unit: "kg",
+                image: "images/friopac_mussarela.png",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 18,
                 name: "Oregano Luzago 1kg",
                 desc: "Orégano seco em flocos Luzago Alimentos. Aroma intenso e qualidade garantida, essencial para pizzas, molhos e temperos profissionais.",
                 price: 27.99,
@@ -1123,7 +1361,7 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 17,
+                id: 19,
                 name: "Alho Triturado ArcoBello 1kg",
                 desc: "Alho triturado ArcoBello em pote de 1kg. Praticidade e sabor intenso para temperar e dar um toque especial nas suas receitas.",
                 price: 14.99,
@@ -1134,7 +1372,7 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 18,
+                id: 20,
                 name: "Linguiça Calabresa Frimesa 3kg",
                 desc: "Linguiça tipo calabresa cozida e defumada Frimesa. Especial para fatiar, perfeita para pizzas e lanches. Pacote de 3kg.",
                 price: 22.49,
@@ -1145,7 +1383,7 @@
                 tagClass: "tag-embutidos"
             },
             {
-                id: 19,
+                id: 21,
                 name: "Linguiça Calabresa Friella Inteira",
                 desc: "Linguiça tipo calabresa cozida e defumada Friella. Excelente qualidade e sabor, ideal para pizzas, porções e lanches.",
                 price: 18.50,
@@ -1156,7 +1394,7 @@
                 tagClass: "tag-embutidos"
             },
             {
-                id: 20,
+                id: 22,
                 name: "Mostarda Sachê D'ajuda Cx 192un",
                 desc: "Caixa com 192 sachês de mostarda amarela D'ajuda de 7g cada. Praticidade e sabor para lanchonetes, pizzarias e food service.",
                 price: 15.59,
@@ -1167,7 +1405,7 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 21,
+                id: 23,
                 name: "American Burger Bisnaga D'ajuda 1,01kg",
                 desc: "Molho cremoso sabor American Burger D'ajuda em bisnaga de 1,01kg. Perfeito para hambúrgueres, hot dogs e lanches em geral.",
                 price: 19.99,
@@ -1178,7 +1416,7 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 22,
+                id: 24,
                 name: "Óleo de Soja cocamar Pet 900ml",
                 desc: "Óleo de soja Cocamar 100% puro em garrafa PET de 900ml.",
                 price: 8.89,
@@ -1233,9 +1471,10 @@
                         <div class="product-price">
                             <span class="currency">R$</span> ${p.price.toFixed(2).replace('.', ',')}${p.unit ? ` <span class="product-unit" style="font-size: 0.6em; font-weight: 500; color: #666; vertical-align: middle;">${p.unit}</span>` : ''}
                         </div>
-                        <button class="product-btn" id="btn-product-${p.id}">
-                            Mais informações
-                        </button>
+                        ${p.id === 1
+                            ? `<button class="product-btn" id="btn-product-${p.id}" onclick="openModal()">Mais informa&#231;&#245;es</button>`
+                            : `<button class="product-btn" id="btn-product-${p.id}">Mais informa&#231;&#245;es</button>`
+                        }
                     </div>
                 </div>
             `).join('');
@@ -1260,9 +1499,45 @@
             document.getElementById('navLinks').classList.toggle('open');
         });
 
+        // ===== MODAL =====
+        const product1 = products.find(p => p.id === 1);
+
+        function openModal() {
+            if (!product1) return;
+            const overlay = document.getElementById('productModal');
+            document.getElementById('modalImg').src = product1.image;
+            document.getElementById('modalImg').alt = product1.name;
+            document.getElementById('modalTag').textContent = product1.tag;
+            document.getElementById('modalTag').className = 'modal-tag ' + product1.tagClass;
+            document.getElementById('modalTitle').textContent = product1.name;
+            document.getElementById('modalDesc').textContent = product1.desc;
+            document.getElementById('modalPrice').textContent = product1.price.toFixed(2).replace('.', ',');
+            document.getElementById('modalUnit').textContent = '/ ' + product1.unit;
+            const waMsg = encodeURIComponent('Olá! Tenho interesse no produto: ' + product1.name + ' - R$ ' + product1.price.toFixed(2).replace('.', ',') + '/' + product1.unit);
+            document.getElementById('modalWhatsapp').href = 'https://wa.me/?text=' + waMsg;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
         // ===== INIT =====
         renderProducts();
     </script>
+
 
 </body>
 
