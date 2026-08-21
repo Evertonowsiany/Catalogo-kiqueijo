@@ -847,7 +847,7 @@
             width: 100%;
             max-width: 520px;
             overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
             transform: translateY(40px) scale(0.95);
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             position: relative;
@@ -871,7 +871,7 @@
             max-height: 180px;
             max-width: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 8px 20px rgba(120,53,15,0.18));
+            filter: drop-shadow(0 8px 20px rgba(120, 53, 15, 0.18));
         }
 
         .modal-tag {
@@ -889,7 +889,7 @@
             position: absolute;
             top: 14px;
             right: 16px;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border: none;
             border-radius: 50%;
             width: 36px;
@@ -985,26 +985,96 @@
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
-            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
         }
 
         .modal-whatsapp-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
         }
 
         @media (max-width: 480px) {
             .modal-box {
                 border-radius: 16px;
             }
+
             .modal-img-area {
                 height: 180px;
             }
+
             .modal-body {
                 padding: 20px 20px 24px;
             }
+
             .modal-body h2 {
                 font-size: 1.1rem;
+            }
+        }
+
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9998;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 22px 14px 16px;
+            border-radius: 50px;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            animation: waPulse 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+            animation: none;
+        }
+
+        .whatsapp-float svg {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+        }
+
+        .whatsapp-float-text {
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        @keyframes waPulse {
+            0% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            }
+
+            50% {
+                box-shadow: 0 6px 36px rgba(37, 211, 102, 0.75);
+            }
+
+            100% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                padding: 12px 16px 12px 12px;
+                font-size: 0.82rem;
+            }
+
+            .whatsapp-float svg {
+                width: 22px;
+                height: 22px;
             }
         }
     </style>
@@ -1116,7 +1186,10 @@
                     </div>
                 </div>
                 <a class="modal-whatsapp-btn" id="modalWhatsapp" href="#" target="_blank">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
                     Pedir pelo WhatsApp
                 </a>
             </div>
@@ -1165,7 +1238,7 @@
             {
                 id: 1,
                 name: "Requeijão Cremoso Coronata 1,5kg",
-                desc: "Requeijão cremoso de altíssima qualidade em bisnaga de 1,5kg, ideal para bordas de pizza, esfihas e recheios.",
+                desc: "Requeijão cremoso de alta qualidade em bisnaga de 1,5kg, ideal para bordas de pizza, esfihas e recheios.",
                 price: 45.69,
                 unit: "un",
                 image: "images/requeijao_coronata_1_5kg.jpg",
@@ -1180,8 +1253,8 @@
                 price: 10.50,
                 unit: "un",
                 image: "images/milk_top_1_8kg.jpg",
-                category: "mistura",
-                tag: "mistura culinaria",
+                category: "Mistura",
+                tag: "Mistura culinaria",
                 tagClass: "tag-queijos"
             },
             {
@@ -1307,6 +1380,50 @@
             },
             {
                 id: 14,
+                name: "Molho de Tomate Pizza D'ajuda 2kg",
+                desc: "Molho de tomate com orégano e cebola D'ajuda em embalagem bag de 2kg. Pronto para usar em pizzas, excelente rendimento e sabor marcante.",
+                price: 18.90,
+                unit: "un",
+                image: "images/dajuda_molho_tomate_2kg.png",
+                category: "conservas",
+                tag: "Molho de Tomate",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 15,
+                name: "Azeitona Verde Fatiada Vale Fértil Balde",
+                desc: "Azeitonas verdes fatiadas Vale Fértil em balde. Selecionadas e conservadas com alto padrão de qualidade, ideais para pizzas, empadões e salgados.",
+                price: 42.90,
+                unit: "un",
+                image: "images/azeitona_verde_fatiada_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 16,
+                name: "Azeitona Preta Fatiada Vale Fértil Balde",
+                desc: "Azeitonas pretas fatiadas Vale Fértil em balde. Sabor suave e marcante, perfeita para pizzas especiais, porções, saladas e culinária profissional.",
+                price: 48.90,
+                unit: "un",
+                image: "images/azeitona_preta_fatiada_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 17,
+                name: "Azeitona Verde Inteira Vale Fértil Balde",
+                desc: "Azeitonas verdes inteiras Vale Fértil em balde. Frutos firmes e saborosos, excelentes para petiscos, porções, bar e restaurantes.",
+                price: 39.90,
+                unit: "un",
+                image: "images/azeitona_verde_inteira_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 18,
                 name: "Queijo Mussarela Queijos da Lelê Peça",
                 desc: "Queijo mussarela tradicional Queijos da Lelê. Excelente derretimento e sabor suave, ideal para pizzas, sanduíches e salgados.",
                 price: 32.90,
@@ -1317,7 +1434,7 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 15,
+                id: 19,
                 name: "Queijo Mussarela Latelli Peça",
                 desc: "Queijo mussarela Latelli em peça. Sabor pronunciado e derretimento perfeito para pizzas de alto padrão e receitas culinárias.",
                 price: 34.90,
@@ -1328,7 +1445,7 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 16,
+                id: 20,
                 name: "Queijo Mussarela Laticínios Mangoni Peça",
                 desc: "Queijo mussarela Mangoni em peça. Altíssimo padrão de qualidade, ideal para fatiar, ralar e derreter em pizzas e receitas especiais.",
                 price: 33.90,
@@ -1339,8 +1456,8 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 17,
-                name: "Queijo Mussarela Friopac Peça",
+                id: 21,
+                name: "Queijo Mussarela Friopac Peça 4kg",
                 desc: "Queijo mussarela Friopac em peça. Excelente textura, sabor marcante e ótimo derretimento para pizzas, lanches e culinária em geral.",
                 price: 30.00,
                 unit: "kg",
@@ -1350,7 +1467,18 @@
                 tagClass: "tag-queijos"
             },
             {
-                id: 18,
+                id: 22,
+                name: "Queijo Mussarela Extralat Barra 4kg",
+                desc: "Queijo mussarela Extralat em barra de 4kg. Alta qualidade, derretimento uniforme e sabor suave, ideal para pizzas, lanches e culinária profissional em grande escala.",
+                price: 31.90,
+                unit: "kg",
+                image: "images/extralat_mussarela_4kg.png",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 23,
                 name: "Oregano Luzago 1kg",
                 desc: "Orégano seco em flocos Luzago Alimentos. Aroma intenso e qualidade garantida, essencial para pizzas, molhos e temperos profissionais.",
                 price: 27.99,
@@ -1361,7 +1489,7 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 19,
+                id: 24,
                 name: "Alho Triturado ArcoBello 1kg",
                 desc: "Alho triturado ArcoBello em pote de 1kg. Praticidade e sabor intenso para temperar e dar um toque especial nas suas receitas.",
                 price: 14.99,
@@ -1372,7 +1500,29 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 20,
+                id: 25,
+                name: "Alho Triturado Toscana Balde 3kg",
+                desc: "Alho triturado sem sal Toscana em balde de 3kg. Praticidade e rendimento para pizzarias, restaurantes e food service de alto volume.",
+                price: 39.90,
+                unit: "un",
+                image: "images/toscana_alho_triturado_3kg.png",
+                category: "temperos",
+                tag: "Alho",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 26,
+                name: "Coloral 1kg",
+                desc: "Colorau em pó de 1kg. Corante natural à base de urucum, essencial para dar cor e sabor marcante a carnes, frango, arroz e receitas culinárias.",
+                price: 12.90,
+                unit: "un",
+                image: "images/coloral_1kg.png",
+                category: "temperos",
+                tag: "Temperos",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 27,
                 name: "Linguiça Calabresa Frimesa 3kg",
                 desc: "Linguiça tipo calabresa cozida e defumada Frimesa. Especial para fatiar, perfeita para pizzas e lanches. Pacote de 3kg.",
                 price: 22.49,
@@ -1383,7 +1533,7 @@
                 tagClass: "tag-embutidos"
             },
             {
-                id: 21,
+                id: 28,
                 name: "Linguiça Calabresa Friella Inteira",
                 desc: "Linguiça tipo calabresa cozida e defumada Friella. Excelente qualidade e sabor, ideal para pizzas, porções e lanches.",
                 price: 18.50,
@@ -1394,7 +1544,7 @@
                 tagClass: "tag-embutidos"
             },
             {
-                id: 22,
+                id: 29,
                 name: "Mostarda Sachê D'ajuda Cx 192un",
                 desc: "Caixa com 192 sachês de mostarda amarela D'ajuda de 7g cada. Praticidade e sabor para lanchonetes, pizzarias e food service.",
                 price: 15.59,
@@ -1405,7 +1555,40 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 23,
+                id: 30,
+                name: "Molho Barbecue Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de molho barbecue D'ajuda de 7g cada. Sabor defumado e marcante, ideal para lanchonetes, hamburguerias e food service.",
+                price: 18.90,
+                unit: "cx",
+                image: "images/barbecue_sache_dajuda.png",
+                category: "temperos",
+                tag: "Barbecue",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 31,
+                name: "Maionese Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de maionese tradicional D'ajuda de 7g cada. Praticidade, higiene e cremosidade para lanchonetes, pizzarias e deliverys.",
+                price: 16.50,
+                unit: "cx",
+                image: "images/maionese_sache_dajuda.png",
+                category: "temperos",
+                tag: "Maionese",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 32,
+                name: "Molho Verde Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de molho verde com ervas D'ajuda de 7g cada. Sabor especial e praticidade para porções, hambúrgueres e petiscos.",
+                price: 18.50,
+                unit: "cx",
+                image: "images/molho_verde_sache_dajuda.png",
+                category: "temperos",
+                tag: "Molho Verde",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 33,
                 name: "American Burger Bisnaga D'ajuda 1,01kg",
                 desc: "Molho cremoso sabor American Burger D'ajuda em bisnaga de 1,01kg. Perfeito para hambúrgueres, hot dogs e lanches em geral.",
                 price: 19.99,
@@ -1416,7 +1599,73 @@
                 tagClass: "tag-temperos"
             },
             {
-                id: 24,
+                id: 34,
+                name: "Molho Barbecue D'ajuda Galão 3,6kg",
+                desc: "Molho barbecue D'ajuda em galão de 3,6kg. Sabor defumado e encorpado, perfeito para porções, hambúrgueres, carnes e uso profissional em escala.",
+                price: 34.90,
+                unit: "un",
+                image: "images/barbecue_galao_dajuda_3_6kg.png",
+                category: "temperos",
+                tag: "Molho",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 35,
+                name: "Shoyu Tradicional Mitsuwa Galão 3,1L",
+                desc: "Molho de soja tradicional Mitsuwa em galão de 3,1L. Fermentação natural, sabor autêntico e rendimento superior para pratos asiáticos e marinandas.",
+                price: 29.90,
+                unit: "un",
+                image: "images/mitsuwa_shoyu_3_1l.png",
+                category: "temperos",
+                tag: "Shoyu",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 36,
+                name: "Mostarda Amarela D'ajuda Galão 3,2kg",
+                desc: "Molho de mostarda amarela D'ajuda em galão de 3,2kg. Textura cremosa e sabor marcante, ideal para lanchonetes, pastelarias e culinária em geral.",
+                price: 32.90,
+                unit: "un",
+                image: "images/mostarda_galao_dajuda_3_2kg.png",
+                category: "temperos",
+                tag: "Mostarda",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 37,
+                name: "Catchup Tradicional D'ajuda Galão 3,5kg",
+                desc: "Catchup tradicional D'ajuda em galão de 3,5kg. Preparado com tomates selecionados, sabor equilibrado e ideal para lanches, porções e pizzas.",
+                price: 35.90,
+                unit: "un",
+                image: "images/catchup_galao_dajuda_3_5kg.png",
+                category: "temperos",
+                tag: "Catchup",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 38,
+                name: "Molho Cremoso Sabor Catchup Calcutá Galão 3,4kg",
+                desc: "Molho cremoso sabor catchup Calcutá em galão de 3,4kg. Excelente rendimento e sabor agradável, perfeito para hamburguerias, lanchonetes e porções.",
+                price: 24.90,
+                unit: "un",
+                image: "images/catchup_galao_calcuta_3_4kg.png",
+                category: "temperos",
+                tag: "Catchup",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 39,
+                name: "Mostarda Calcutá Galão 3,2kg",
+                desc: "Condimento preparado à base de mostarda Calcutá em galão de 3,2kg. Sabor característico e ótimo custo-benefício para lanches e estabelecimentos alimentícios.",
+                price: 22.90,
+                unit: "un",
+                image: "images/mostarda_galao_calcuta_3_2kg.png",
+                category: "temperos",
+                tag: "Mostarda",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 40,
                 name: "Óleo de Soja cocamar Pet 900ml",
                 desc: "Óleo de soja Cocamar 100% puro em garrafa PET de 900ml.",
                 price: 8.89,
@@ -1425,6 +1674,83 @@
                 category: "outros",
                 tag: "Óleo",
                 tagClass: "tag-conservas"
+            },
+            {
+                id: 41,
+                name: "Doritos Sabor Queijo Nacho",
+                desc: "Tortilha de milho sabor queijo nacho Doritos. Ideal para porções especiais, pizzas mexicanas, lanches e petiscos.",
+                price: 12.90,
+                unit: "un",
+                image: "images/doritos_queijo_nacho.png",
+                category: "outros",
+                tag: "Salgadinho",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 42,
+                name: "Creme Culinário Master Martini 1L",
+                desc: "Creme culinário UHT Master Martini Cuisine em embalagem de 1L. Não talha ao ferver, textura cremosa para receitas doces e salgadas.",
+                price: 16.90,
+                unit: "un",
+                image: "images/creme_culinario_master_martini_1l.png",
+                category: "mistura",
+                tag: "Creme Culinário",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 43,
+                name: "Recheio Sabor Creme Leitinho Doceiro 1,005kg",
+                desc: "Recheio sabor creme leitinho Haenssgen Doceiro em manga de 1,005kg. Pronto para uso em pizzas doces, bolos, tortas e sobremesas.",
+                price: 24.90,
+                unit: "un",
+                image: "images/recheio_creme_leitinho_doceiro_1kg.png",
+                category: "mistura",
+                tag: "Recheio Doce",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 44,
+                name: "Recheio Forneável Sabor Doce de Leite Bom Princípio 1,01kg",
+                desc: "Recheio forneável sabor doce de leite Bom Princípio em manga de 1,01kg. Resistente a altas temperaturas, perfeito para pizzas, pastéis e doces.",
+                price: 23.90,
+                unit: "un",
+                image: "images/recheio_doce_de_leite_bom_principio_1kg.png",
+                category: "mistura",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 45,
+                name: "Recheio Forneável Sabor Chocolate ao Leite Doceiro 1,005kg",
+                desc: "Recheio forneável sabor chocolate ao leite Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, ideal para pizzas doces, pastéis e bolos.",
+                price: 25.90,
+                unit: "un",
+                image: "images/recheio_chocolate_ao_leite_doceiro_1kg.png",
+                category: "mistura",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 46,
+                name: "Recheio Forneável Sabor Chocolate Branco Doceiro 1,005kg",
+                desc: "Recheio forneável sabor chocolate branco Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, perfeito para pizzas doces, tortas e sobremesas.",
+                price: 25.90,
+                unit: "un",
+                image: "images/recheio_chocolate_branco_doceiro_1kg.png",
+                category: "mistura",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 47,
+                name: "Recheio Forneável Sabor Creme de Avelã com Cacau Doceiro 1,005kg",
+                desc: "Recheio forneável sabor creme de avelã com cacau Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, perfeito para pizzas doces, croissants e confeitaria.",
+                price: 27.90,
+                unit: "un",
+                image: "images/recheio_creme_avela_cacau_doceiro_1kg.png",
+                category: "mistura",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
             }
         ];
 
@@ -1472,9 +1798,9 @@
                             <span class="currency">R$</span> ${p.price.toFixed(2).replace('.', ',')}${p.unit ? ` <span class="product-unit" style="font-size: 0.6em; font-weight: 500; color: #666; vertical-align: middle;">${p.unit}</span>` : ''}
                         </div>
                         ${p.id === 1
-                            ? `<button class="product-btn" id="btn-product-${p.id}" onclick="openModal()">Mais informa&#231;&#245;es</button>`
-                            : `<button class="product-btn" id="btn-product-${p.id}">Mais informa&#231;&#245;es</button>`
-                        }
+                    ? `<button class="product-btn" id="btn-product-${p.id}" onclick="openModal()">Mais informa&#231;&#245;es</button>`
+                    : `<button class="product-btn" id="btn-product-${p.id}">Mais informa&#231;&#245;es</button>`
+                }
                     </div>
                 </div>
             `).join('');
@@ -1526,11 +1852,11 @@
 
         document.getElementById('modalClose').addEventListener('click', closeModal);
 
-        document.getElementById('productModal').addEventListener('click', function(e) {
+        document.getElementById('productModal').addEventListener('click', function (e) {
             if (e.target === this) closeModal();
         });
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeModal();
         });
 
@@ -1538,6 +1864,16 @@
         renderProducts();
     </script>
 
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span class="whatsapp-float-text">Falar no WhatsApp</span>
+    </a>
 
 </body>
 
