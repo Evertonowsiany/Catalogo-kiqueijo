@@ -416,6 +416,16 @@
             color: var(--gold-800);
         }
 
+        .tag-requeijao {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+            color: #1E3A8A;
+        }
+
+        .tag-cheddar {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: #92400E;
+        }
+
         .tag-molhos {
             background: linear-gradient(135deg, #FEE2E2, #FECACA);
             color: #991B1B;
@@ -1236,6 +1246,28 @@
         // ===== PRODUCTS DATA =====
         const products = [
             {
+                id: 69,
+                name: "Catupiri c/ Amido Alcrema 1,01kg",
+                desc: "Mistura de requeijão, queijo e amido culinário Alcrema Alimentos. De Minas para você. Peso líquido 1,01kg. Ideal para rechear esfihas, coxinhas, pizzas e preparações que exigem requeijão cremoso de alta qualidade.",
+                price: 16.45,
+                unit: "un",
+                image: "images/catupiri_alcremo_1kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-requeijao"
+            },
+            {
+                id: 70,
+                name: "Cheddar c/ Amido Alcrema 1,01kg",
+                desc: "Mistura de requeijão, queijo e amido com condimento sabor queijo tipo cheddar culinário Alcrema Alimentos. De Minas para você. Peso líquido 1,01kg. Perfeito para lanches, hambúrgueres e receitas com sabor cheddar.",
+                price: 17.65,
+                unit: "un",
+                image: "images/cheddar_alcremo_1kg.jpg",
+                category: "cheddar",
+                tag: "Cheddar",
+                tagClass: "tag-cheddar"
+            },
+            {
                 id: 1,
                 name: "Requeijão Cremoso Coronata 1,5kg",
                 desc: "Requeijão cremoso de alta qualidade em bisnaga de 1,5kg, ideal para bordas de pizza, esfihas e recheios.",
@@ -1418,6 +1450,39 @@
                 price: 47.85,
                 unit: "un",
                 image: "images/azeitona_verde_inteira_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 60,
+                name: "Azeitona Verde s/Caroço Margherita Balde 3kg",
+                desc: "Azeitonas verdes sem caroço Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Qualidade premium para pizzas, massas, saladas e culinária profissional.",
+                price: 48.70,
+                unit: "un",
+                image: "images/azeitona_s_caroco_margherita_balde.jpg",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 61,
+                name: "Azeitona Verde Fatiada Margherita Balde 3kg",
+                desc: "Azeitonas verdes fatiadas Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Praticidade e sabor marcante para pizzas, esfihas, recheios e culinária profissional.",
+                price: 47.20,
+                unit: "un",
+                image: "images/azeitona_fatiada_margherita_balde.jpg",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 62,
+                name: "Azeitona Verde Rainha Balde 3kg",
+                desc: "Azeitonas verdes em conserva Rainha das Azeitonas em balde de 3kg (peso drenado 2kg). Frutos selecionados de excelente qualidade e sabor equilibrado, perfeitas para pizzas, lanches, saladas e porções.",
+                price: 28.50,
+                unit: "un",
+                image: "images/azeitona_rainha_3kg.jpg",
                 category: "conservas",
                 tag: "Azeitona",
                 tagClass: "tag-conservas"
@@ -1809,11 +1874,11 @@
             },
             {
                 id: 53,
-                name: "Amaciante de Carne 1kg",
-                desc: "Amaciante de carne com condimentos especiais. Proporciona máxima maciez e suculência, realçando o sabor de cortes bovinos, suínos e aves.",
+                name: "Amaciante de Carnes Tecnutri 1,01kg",
+                desc: "Amaciante de carnes com condimentos especiais Tecnutri Food Service. Proporciona máxima maciez e suculência, realçando o sabor de cortes bovinos, suínos e aves. Nova fórmula, 1,01kg.",
                 price: 15.49,
                 unit: "un",
-                image: "images/amaciante_de_carne_1kg.png",
+                image: "images/amaciante_de_carne_1kg.jpg",
                 category: "temperos",
                 tag: "Temperos",
                 tagClass: "tag-temperos"
@@ -1885,29 +1950,72 @@
                 tagClass: "tag-conservas"
             },
             {
-                id: 60,
-                name: "Azeitona Verde s/Caroço Margherita Balde 3kg",
-                desc: "Azeitonas verdes sem caroço Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Qualidade premium para pizzas, massas, saladas e culinária profissional.",
-                price: 48.70,
+                id: 63,
+                name: "Fermento Biológico Seco Itaiquara 500g",
+                desc: "Fermento biológico seco instantâneo Itaiquara Desde 1911. Ideal para pães e pizzas. Alta performance e fácil utilização, proporciona crescimento uniforme e resultado profissional. Peso líquido 500g.",
+                price: 15.99,
                 unit: "un",
-                image: "images/azeitona_s_caroco_margherita_balde.jpg",
+                image: "images/fermento_itaiquara_500g.jpg",
+                category: "mistura",
+                tag: "Fermento",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 64,
+                name: "Maionese Tradicional D'ajuda Bag 3kg",
+                desc: "Maionese tradicional D'ajuda Food Service em embalagem bag de 3kg (2,9L). Utilize em receitas quentes e frias. Sabor suave e cremosidade perfeita para sanduíches, lanches, saladas e culinária em geral.",
+                price: 25.99,
+                unit: "un",
+                image: "images/maionese_bag_dajuda_3kg.jpg",
                 category: "conservas",
-                tag: "Azeitona",
+                tag: "Maionese",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 65,
+                name: "Ovo de Codorna em Conserva Serra do Mar Balde 1kg",
+                desc: "Ovos em conserva de codorna Serra do Mar em balde. Peso líquido 1,7kg, peso drenado 1kg. Sem glúten, inspecionado SIP/POA. Ideal para pizzas, petiscos, saladas e tábuas de frios.",
+                price: 33.40,
+                unit: "un",
+                image: "images/ovo_codorna_balde_1kg.jpg",
+                category: "conservas",
+                tag: "Ovos",
                 tagClass: "tag-conservas"
             },
             {
-                id: 61,
-                name: "Azeitona Verde Fatiada Margherita Balde 3kg",
-                desc: "Azeitonas verdes fatiadas Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Praticidade e sabor marcante para pizzas, esfihas, recheios e culinária profissional.",
-                price: 47.20,
+                id: 66,
+                name: "Fubá Mimoso Siloti 1kg",
+                desc: "Farinha fina de milho (Fubá Mimoso) Siloti, enriquecida com ferro e ácido fólico (Vitamina B9). Peso líquido 1kg. Garantia de qualidade para polenta, mingau, bolos e receitas culinárias.",
+                price: 3.70,
                 unit: "un",
-                image: "images/azeitona_fatiada_margherita_balde.jpg",
-                category: "conservas",
-                tag: "Azeitona",
-                tagClass: "tag-conservas"
+                image: "images/fuba_siloti_1kg.jpg",
+                category: "mistura",
+                tag: "Fubá",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 67,
+                name: "Queijo Mussarela Fatiado Sotille 1kg",
+                desc: "Queijo mussarela fatiado Sotille, peso líquido 1kg. Sem glúten, contém lactose. Produzido por Vitte Indústria de Laticínios, inspecionado SIM/POA. Ideal para lanches, pizzas e sanduíches. Manter resfriado de 0°C a 8°C.",
+                price: 34.90,
+                unit: "un",
+                image: "images/mussarela_sotille_1kg.jpg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 68,
+                name: "Manteiga Sem Sal Friopac 1kg",
+                desc: "Manteiga sem sal Friopac Indústria de Laticínios, 1kg. Registrada SIP/POA. Não contém glúten, contém lactose. Validade até 120 dias. Ideal para culinária, confeitaria, pão de queijo e receitas profissionais.",
+                price: 23.99,
+                unit: "un",
+                image: "images/manteiga_friopac_1kg.jpg",
+                category: "queijos",
+                tag: "Manteiga",
+                tagClass: "tag-queijos"
             }
         ];
-
         // ===== STATE =====
         let activeCategory = 'todos';
         let searchQuery = '';
