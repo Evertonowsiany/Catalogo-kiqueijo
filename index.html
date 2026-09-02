@@ -7,6 +7,8 @@
     <meta name="description"
         content="Kiqueijo - Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço justo com entrega rápida.">
     <title>Kiqueijo | Requeijões e Insumos Profissionais</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="apple-touch-icon" href="favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -1172,7 +1174,7 @@
         <!-- ===== ANNOUNCEMENT BAR ===== -->
         <div class="announcement-bar">
             <span class="announcement-bar-dot"></span>
-            Pedidos até <strong style="margin: 0 2px;">10h</strong> serão entregues no mesmo dia! 🚀
+            Pedidos feitos até <strong style="margin: 0 2px;">10h</strong> serão entregues no mesmo dia! 🚀
         </div>
     </header>
 
@@ -1229,8 +1231,14 @@
             <button class="category-btn" data-category="embutidos" onclick="filterCategory(this)">
                 <span class="cat-icon">🥓</span> Embutidos
             </button>
+            <button class="category-btn" data-category="bacons" onclick="filterCategory(this)">
+                <span class="cat-icon">🥩</span> Bacons
+            </button>
             <button class="category-btn" data-category="congelados" onclick="filterCategory(this)">
                 <span class="cat-icon">❄️</span> Congelados
+            </button>
+            <button class="category-btn" data-category="chocolates" onclick="filterCategory(this)">
+                <span class="cat-icon">🍫</span> Chocolates
             </button>
         </div>
     </section>
@@ -1850,7 +1858,7 @@
                 price: 24.90,
                 unit: "un",
                 image: "images/recheio_creme_leitinho_doceiro_1kg.png",
-                category: "mistura",
+                category: ["mistura", "chocolates"],
                 tag: "Recheio Doce",
                 tagClass: "tag-farinhas"
             },
@@ -1861,7 +1869,7 @@
                 price: 23.90,
                 unit: "un",
                 image: "images/recheio_doce_de_leite_bom_principio_1kg.png",
-                category: "mistura",
+                category: ["mistura", "chocolates"],
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1872,7 +1880,7 @@
                 price: 25.90,
                 unit: "un",
                 image: "images/recheio_chocolate_ao_leite_doceiro_1kg.png",
-                category: "mistura",
+                category: ["mistura", "chocolates"],
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1883,7 +1891,7 @@
                 price: 24.60,
                 unit: "un",
                 image: "images/recheio_chocolate_branco_doceiro_1kg.png",
-                category: "mistura",
+                category: ["mistura", "chocolates"],
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1894,7 +1902,7 @@
                 price: 27.90,
                 unit: "un",
                 image: "images/recheio_creme_avela_cacau_doceiro_1kg.png",
-                category: "mistura",
+                category: ["mistura", "chocolates"],
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1916,9 +1924,9 @@
                 price: 17.99,
                 unit: "un",
                 image: "images/acucar_caravelas_5kg.png",
-                category: "mistura",
+                category: "temperos",
                 tag: "Açúcar",
-                tagClass: "tag-farinhas"
+                tagClass: "tag-temperos"
             },
             {
                 id: 56,
@@ -2172,6 +2180,127 @@
                 category: ["congelados", "embutidos"],
                 tag: "Congelados / Embutidos",
                 tagClass: "tag-embutidos"
+            },
+            {
+                id: 79,
+                name: "Bacon Cub Friella",
+                desc: "Bacon de suíno em cubos congelado Friella. Embutido cozido e defumado, ideal para pizzas, recheios, saladas e culinária profissional. Peso líquido 1kg.",
+                price: 23.00,
+                unit: "un",
+                image: "images/bacon_cub_friella.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 80,
+                name: "Bacon Cub B Vista",
+                desc: "Bacon de pernil em cubos Bela Vista Basso Alimentos. Defumado e temperado, com sabor marcante e textura firme. Ideal para pizzas, recheios e culinária em geral. Peso líquido 1kg.",
+                price: 18.20,
+                unit: "un",
+                image: "images/bacon_cub_b_vista.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 81,
+                name: "Bacon Cub Sigma",
+                desc: "Bacon especial de pernil em cubos Sigma Alimentos. Defumado com sabor intenso e textura perfeita para pizzas, porções, ovos mexidos e culinária profissional. Peso líquido 250g.",
+                price: 23.15,
+                unit: "un",
+                image: "images/bacon_cub_sigma.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 82,
+                name: "Bacon Fat Alegra",
+                desc: "Bacon em fatias defumado Alegra em embalagem de 2,7kg. Fatias uniformes com sabor defumado intenso, perfeitas para grelhados, lanches, hambúrgueres e culinária profissional.",
+                price: 36.99,
+                unit: "un",
+                image: "images/bacon_fat_alegra.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 83,
+                name: "Bacon Manta Friella",
+                desc: "Bacon com pele em manta Friella. Suíno com pele, defumado e de alta qualidade, ideal para fatiar, grelhar e uso em receitas profissionais.",
+                price: 26.80,
+                unit: "kg",
+                image: "images/bacon_manta_friella.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 84,
+                name: "Choco Bar Bco Doceiro 1,005kg",
+                desc: "Cobertura fracionada sabor chocolate branco Doceiro Haenssgen. Não necessita temperagem, ideal para bombons, tabletes e recheios. Peso líquido 1,005kg.",
+                price: 24.50,
+                unit: "un",
+                image: "images/choco_bar_bco_doceiro.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 85,
+                name: "Choco Bar Lei Doceiro 1,005kg",
+                desc: "Cobertura fracionada sabor chocolate ao leite Doceiro Haenssgen. Não necessita temperagem, perfeita para bombons, tabletes e rechear doces. Peso líquido 1,005kg.",
+                price: 24.99,
+                unit: "un",
+                image: "images/choco_bar_leite_doceiro.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 86,
+                name: "Confeitosa Branco 1,005kg",
+                desc: "Recheio forneavel sabor chocolate branco Confeitosa. Resiste até 200°C, ideal para pastéis, pizzas, croissants, recheios e coberturas de bolos e tortas. Peso líquido 1,005kg.",
+                price: 20.99,
+                unit: "un",
+                image: "images/confeitosa_branco.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 87,
+                name: "Confeitosa Leite 1,005kg",
+                desc: "Recheio forneavel sabor chocolate ao leite Confeitosa. Resiste até 200°C, ideal para pastéis, pizzas, croissants, recheios e coberturas de bolos e tortas. Peso líquido 1,005kg.",
+                price: 22.85,
+                unit: "un",
+                image: "images/confeitosa_leite.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 88,
+                name: "Doceiro Ralado Leite 1,005kg",
+                desc: "Cobertura sabor chocolate ao leite ralado Doceiro Haenssgen. Ideal para decorar e cobrir pizzas, tortas, bolos, sorvetes e sobremesas. Peso líquido 1,005kg.",
+                price: 26.59,
+                unit: "un",
+                image: "images/doceiro_ralado_leite.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 89,
+                name: "Doceiro Ralado Bco 1,005kg",
+                desc: "Cobertura sabor chocolate branco ralado Doceiro Haenssgen. Ideal para decorar e cobrir pizzas, tortas, bolos, sorvetes e sobremesas. Peso líquido 1,005kg.",
+                price: 26.50,
+                unit: "un",
+                image: "images/doceiro_ralado_branco.jpg",
+                category: "chocolates",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
             }
         ];
         // ===== STATE =====
