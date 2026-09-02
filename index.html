@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -67,18 +67,69 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ===== HEADER / NAVBAR ===== */
-        .navbar {
-            background: var(--amber-gradient-hero);
-            padding: 0 40px;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+
+        /* ===== HEADER & NAVBAR ===== */
+        .site-header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(180, 83, 9, 0.3);
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(180, 83, 9, 0.25);
+        }
+
+        .navbar {
+            background: var(--amber-gradient-hero);
+            padding: 0 40px;
+            height: 59px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar {
+            width: 100%;
+            background: linear-gradient(90deg, #92400E 0%, #B45309 50%, #92400E 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+
+        .announcement-bar-dot {
+            width: 8px;
+            height: 8px;
+            background: #FCD34D;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.7);
+            animation: ping-dot 1.8s ease-in-out infinite;
+        }
+
+        @keyframes ping-dot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.7);
+            }
+
+            60% {
+                box-shadow: 0 0 0 6px rgba(252, 211, 77, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                font-size: 0.74rem;
+                padding: 6px 12px;
+            }
         }
 
         .navbar-brand {
@@ -685,13 +736,14 @@
             .navbar-links {
                 display: none;
                 position: absolute;
-                top: 72px;
+                top: 59px;
                 left: 0;
                 right: 0;
                 background: var(--gold-700);
                 flex-direction: column;
                 padding: 16px;
                 box-shadow: var(--shadow-lg);
+                z-index: 1001;
             }
 
             .navbar-links.open {
@@ -1097,23 +1149,32 @@
 
 <body>
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-        <a href="#" class="navbar-brand">
-            <div class="navbar-logo">🧀</div>
-            <div>
-                <div class="navbar-title">Kiqueijo</div>
-                <div class="navbar-subtitle">Insumos para Food Service</div>
-            </div>
-        </a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
-        <ul class="navbar-links" id="navLinks">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#produtos">Produtos e Insumos</a></li>
-            <li><a href="#categorias">Categorias</a></li>
-            <li><a href="#footer">Contato</a></li>
-        </ul>
-    </nav>
+    <!-- ===== HEADER (NAVBAR + ANNOUNCEMENT) ===== -->
+    <header class="site-header">
+        <nav class="navbar" id="navbar">
+            <a href="#" class="navbar-brand">
+                <div class="navbar-logo">🧀</div>
+                <div>
+                    <div class="navbar-title">Kiqueijo</div>
+                    <div class="navbar-subtitle">Insumos para Food Service</div>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+            <ul class="navbar-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#produtos">Produtos e Insumos</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#footer">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- ===== ANNOUNCEMENT BAR ===== -->
+        <div class="announcement-bar">
+            <span class="announcement-bar-dot"></span>
+            Pedidos até <strong style="margin: 0 2px;">10h</strong> serão entregues no mesmo dia! 🚀
+        </div>
+    </header>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
