@@ -303,6 +303,47 @@
             font-size: 1.1rem;
         }
 
+        .search-hint {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 8px 18px;
+            background: rgba(0, 0, 0, 0.14);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: var(--radius-full);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.85rem;
+            font-weight: 500;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 100%;
+        }
+
+        .search-hint-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .search-hint strong {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: var(--transition);
+        }
+
+        .search-hint strong:hover {
+            background: rgba(255, 255, 255, 0.38);
+        }
+
         /* ===== WAVE DIVIDER ===== */
         .wave-divider {
             position: relative;
@@ -871,6 +912,13 @@
                 font-size: 0.9rem;
             }
 
+            .search-hint {
+                font-size: 0.78rem;
+                padding: 7px 14px;
+                margin-top: 12px;
+                gap: 6px;
+            }
+
             .navbar-title {
                 font-size: 1.2rem;
             }
@@ -1190,6 +1238,12 @@
                 <span class="search-icon">🔍</span>
                 <input type="text" id="searchInput" placeholder="Pesquisar insumo, categoria ou marca..."
                     autocomplete="off">
+            </div>
+            <div class="search-hint">
+                <span class="search-hint-icon">💡</span>
+                <span>Ao pesquisar, certifique-se de que no filtro de categorias o botão <strong
+                        onclick="document.querySelector('.category-btn[data-category=\'todos\']').click()"
+                        title="Clique para selecionar Todos">"Todos"</strong> está selecionado.</span>
             </div>
         </div>
     </section>
