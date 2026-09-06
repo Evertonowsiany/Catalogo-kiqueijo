@@ -1236,7 +1236,6 @@
                     autocomplete="off">
             </div>
             <div class="search-hint">
-                <span class="search-hint-icon">💡</span>
                 <span>Ao pesquisar, certifique-se de que no filtro de categorias o botão <strong
                         onclick="document.querySelector('.category-btn[data-category=\'todos\']').click()"
                         title="Clique para selecionar Todos">"Todos"</strong> está selecionado.</span>
@@ -1287,8 +1286,8 @@
             <button class="category-btn" data-category="congelados" onclick="filterCategory(this)">
                 <span class="cat-icon">❄️</span> Congelados
             </button>
-            <button class="category-btn" data-category="chocolates" onclick="filterCategory(this)">
-                <span class="cat-icon">🍫</span> Chocolates
+            <button class="category-btn" data-category="chocolates/doces" onclick="filterCategory(this)">
+                <span class="cat-icon">🍫</span> Chocolates / Doces
             </button>
         </div>
     </section>
@@ -1908,7 +1907,7 @@
                 price: 24.90,
                 unit: "un",
                 image: "images/recheio_creme_leitinho_doceiro_1kg.png",
-                category: ["mistura", "chocolates"],
+                category: "chocolates/doces",
                 tag: "Recheio Doce",
                 tagClass: "tag-farinhas"
             },
@@ -1919,7 +1918,7 @@
                 price: 23.90,
                 unit: "un",
                 image: "images/recheio_doce_de_leite_bom_principio_1kg.png",
-                category: ["mistura", "chocolates"],
+                category: "chocolates/doces",
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1930,7 +1929,7 @@
                 price: 25.90,
                 unit: "un",
                 image: "images/recheio_chocolate_ao_leite_doceiro_1kg.png",
-                category: ["mistura", "chocolates"],
+                category: "chocolates/doces",
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1941,7 +1940,7 @@
                 price: 24.60,
                 unit: "un",
                 image: "images/recheio_chocolate_branco_doceiro_1kg.png",
-                category: ["mistura", "chocolates"],
+                category: "chocolates/doces",
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -1952,7 +1951,7 @@
                 price: 27.90,
                 unit: "un",
                 image: "images/recheio_creme_avela_cacau_doceiro_1kg.png",
-                category: ["mistura", "chocolates"],
+                category: "chocolates/doces",
                 tag: "Recheio Forneável",
                 tagClass: "tag-farinhas"
             },
@@ -2029,7 +2028,7 @@
                 price: 19.35,
                 unit: "un",
                 image: "images/amendoim_granulado_1kg.jpg",
-                category: "mistura",
+                category: "chocolates/doces",
                 tag: "Confeitaria",
                 tagClass: "tag-farinhas"
             },
@@ -2106,7 +2105,7 @@
                 price: 15.99,
                 unit: "un",
                 image: "images/fermento_itaiquara_500g.jpg",
-                category: "mistura",
+                category: "temperos",
                 tag: "Fermento",
                 tagClass: "tag-farinhas"
             },
@@ -2139,7 +2138,7 @@
                 price: 3.70,
                 unit: "un",
                 image: "images/fuba_siloti_1kg.jpg",
-                category: "mistura",
+                category: "temperos",
                 tag: "Fubá",
                 tagClass: "tag-farinhas"
             },
@@ -2293,7 +2292,7 @@
                 price: 24.50,
                 unit: "un",
                 image: "images/choco_bar_bco_doceiro.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
                 tagClass: "tag-farinhas"
             },
@@ -2304,7 +2303,7 @@
                 price: 24.99,
                 unit: "un",
                 image: "images/choco_bar_leite_doceiro.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
                 tagClass: "tag-farinhas"
             },
@@ -2315,7 +2314,7 @@
                 price: 20.99,
                 unit: "un",
                 image: "images/confeitosa_branco.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
                 tagClass: "tag-farinhas"
             },
@@ -2326,7 +2325,7 @@
                 price: 22.85,
                 unit: "un",
                 image: "images/confeitosa_leite.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
                 tagClass: "tag-farinhas"
             },
@@ -2337,7 +2336,7 @@
                 price: 26.59,
                 unit: "un",
                 image: "images/doceiro_ralado_leite.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
                 tagClass: "tag-farinhas"
             },
@@ -2348,8 +2347,107 @@
                 price: 26.50,
                 unit: "un",
                 image: "images/doceiro_ralado_branco.jpg",
-                category: "chocolates",
+                category: "chocolates/doces",
                 tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 90,
+                name: "Lombo Fatiado Basso 1kg",
+                desc: "Lombo defumado e fatiado BelaVista Basso em embalagem de 1kg. Fatias selecionadas de alta qualidade e sabor marcante, ideal para pizzas, lanches e porções.",
+                price: 24.99,
+                unit: "un",
+                image: "images/lombo_fatiado_basso_1kg.jpg",
+                category: "embutidos",
+                tag: "Lombo",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 91,
+                name: "Pepperoni Bonatti 500g",
+                desc: "Embutido cozido de carne suína sabor pepperoni defumado e fatiado Bonatti em embalagem de 500g. Prático, saboroso e com fatias uniformes para pizzas e lanches.",
+                price: 18.00,
+                unit: "un",
+                image: "images/pepperoni_bonatti_500g.jpg",
+                category: "embutidos",
+                tag: "Pepperoni",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 92,
+                name: "Queijo Provolone",
+                desc: "Queijo provolone defumado em peça. Sabor marcante, consistência firme e aroma característico, excelente para pizzas, tábuas de frios, petiscos e receitas.",
+                price: 43.50,
+                unit: "kg",
+                image: "images/queijo_provolone.jpg",
+                category: "queijos",
+                tag: "Provolone",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 93,
+                name: "Queijo Parmesão",
+                desc: "Queijo parmesão de sabor marcante, textura granulada e maturação no ponto certo. Excelente para ralar, gratinar massas, pizzas, risotos e finalização de pratos.",
+                price: 44.90,
+                unit: "kg",
+                image: "images/queijo_parmesao.png",
+                category: "queijos",
+                tag: "Parmesão",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 94,
+                name: "Calabresa Fatiada Bonatti 1kg",
+                desc: "Linguiça tipo calabresa cozida e defumada fatiada Bonatti em pacote de 1kg. Fatias padronizadas, sabor defumado autêntico e máxima praticidade para pizzas e lanches.",
+                price: 22.45,
+                unit: "un",
+                image: "images/calabresa_fatiada_bonatti_1kg.jpg",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 95,
+                name: "Pimenta Calabresa Luzago 100g",
+                desc: "Pimenta calabresa em flocos Luzago Alimentos em pacote de 100g. Picância equilibrada e aroma marcante, perfeita para pizzas, molhos, carnes e temperos profissionais.",
+                price: 5.80,
+                unit: "un",
+                image: "images/pimenta_calabresa_luzago_100g.jpg",
+                category: "temperos",
+                tag: "Pimenta",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 96,
+                name: "Manjericão Luzago 100g",
+                desc: "Manjericão desidratado Luzago Alimentos em embalagem de 100g. Aroma fresco e marcante, ideal para molhos de tomate, pizzas margherita, massas e temperos.",
+                price: 4.99,
+                unit: "un",
+                image: "images/manjericao_luzago_100g.jpg",
+                category: "temperos",
+                tag: "Manjericão",
+                tagClass: "tag-temperos"
+            },
+            {
+                id: 97,
+                name: "Catupiry Galileo 1,5kg",
+                desc: "Mistura de requeijão e gordura vegetal e amido Galileo Coronato em bisnaga de 1,5kg. Excelente cremosidade, estabilidade e rendimento para pizzas, bordas, coxinhas e recheios.",
+                price: 15.20,
+                unit: "un",
+                image: "images/catupiry_galileo_1_5kg.jpg",
+                category: "mistura",
+                tag: "Mistura Culinária",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 98,
+                name: "Choco Power Ball Mavalério 500g",
+                desc: "Cereal de arroz com cobertura sabor chocolate e chocolate branco (mesclado) Choco Power Ball Mavalério em pacote de 500g. Crocante e delicioso, perfeito para decoração de pizzas doces, açaí, bolos, tortas e sobremesas.",
+                price: 25.50,
+                unit: "un",
+                image: "images/choco_power_ball_mavalerio_500g.jpg",
+                category: "chocolates/doces",
+                tag: "Confeitaria",
                 tagClass: "tag-farinhas"
             }
         ];
@@ -2365,12 +2463,13 @@
             const filtered = products.filter(p => {
                 const matchCategory = activeCategory === 'todos' ||
                     (Array.isArray(p.category)
-                        ? p.category.includes(activeCategory)
-                        : (p.category && p.category.toLowerCase() === activeCategory.toLowerCase()));
+                        ? p.category.some(c => c.toLowerCase() === activeCategory.toLowerCase() || (activeCategory === 'chocolates/doces' && c.toLowerCase() === 'chocolates'))
+                        : (p.category && (p.category.toLowerCase() === activeCategory.toLowerCase() || (activeCategory === 'chocolates/doces' && p.category.toLowerCase() === 'chocolates'))));
                 const matchSearch = searchQuery === '' ||
                     p.name.toLowerCase().includes(searchQuery) ||
                     p.desc.toLowerCase().includes(searchQuery) ||
-                    p.tag.toLowerCase().includes(searchQuery);
+                    p.tag.toLowerCase().includes(searchQuery) ||
+                    (Array.isArray(p.category) ? p.category.some(c => c.toLowerCase().includes(searchQuery)) : (p.category && p.category.toLowerCase().includes(searchQuery)));
                 return matchCategory && matchSearch;
             });
 
