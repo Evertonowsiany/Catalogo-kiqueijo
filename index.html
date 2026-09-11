@@ -1235,11 +1235,6 @@
                 <input type="text" id="searchInput" placeholder="Pesquisar insumo, categoria ou marca..."
                     autocomplete="off">
             </div>
-            <div class="search-hint">
-                <span>Ao pesquisar, certifique-se de que no filtro de categorias o botão <strong
-                        onclick="document.querySelector('.category-btn[data-category=\'todos\']').click()"
-                        title="Clique para selecionar Todos">"Todos"</strong> está selecionado.</span>
-            </div>
         </div>
     </section>
 
@@ -2982,10 +2977,24 @@
             document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             activeCategory = btn.dataset.category;
+            // Limpa a barra de pesquisa ao trocar de categoria
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
             renderProducts();
         }
 
         // ===== SEARCH =====
+        document.getElementById('searchInput').addEventListener('focus', function () {
+            // Ao focar na barra de pesquisa, seleciona automaticamente a categoria "todos"
+            const todosBtn = document.querySelector('.category-btn[data-category="todos"]');
+            if (todosBtn && activeCategory !== 'todos') {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                todosBtn.classList.add('active');
+                activeCategory = 'todos';
+                renderProducts();
+            }
+        });
+
         document.getElementById('searchInput').addEventListener('input', function (e) {
             searchQuery = e.target.value.toLowerCase().trim();
             renderProducts();
